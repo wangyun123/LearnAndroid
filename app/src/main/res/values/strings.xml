@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string name="name_textview">启动界面</string>
+    <string name="name_button">按钮01</string>
+    <string name="name_button2">按钮2</string>
+    <string name="name_contact">通信录</string>
+    <string name="name_handler">这是一个Handler程序</string>
+    <string name="name_handler_button">按钮Handler</string>
+    <string name="name_music_start">开始播放</string>
+    <string name="name_music_stop">停止播放</string>
+    <string name="name_music_button">音乐播放器</string>
+    <string name="name_web_view_button">网页</string>
+    <string name="name_broadcast_button">广播接收</string>
+    <string name="name_send_broadcast_button">发送广播</string>
+    <string name="name_register_broadcast_button">注册广播控件</string>
+    <string name="name_list_view_button">ListView控件</string>
+    <string name="name_widget_button">Widget控件</string>
+</resources>
