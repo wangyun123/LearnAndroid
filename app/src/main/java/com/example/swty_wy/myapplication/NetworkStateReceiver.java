@@ -11,6 +11,7 @@ import android.widget.Toast;
 /**
  * Created by SWTY-WY on 2016/8/4.
  */
+
 public class NetworkStateReceiver extends BroadcastReceiver {
     private static final String TAG = "NetworkStateReceiver";
 
