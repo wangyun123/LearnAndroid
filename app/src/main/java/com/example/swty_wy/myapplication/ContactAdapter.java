@@ -29,6 +29,16 @@ public class ContactAdapter extends BaseAdapter {
         }
     }
 
+    public ContactAdapter(Context context, List<UserInfo> listUsers) {
+        mContext = context;
+        mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mListUsers = listUsers;
+    }
+
+    public void refreshData(List<UserInfo> list){
+        mListUsers = list;
+    }
+
     @Override
     public int getCount() {
         return mListUsers.size();
@@ -59,4 +69,5 @@ public class ContactAdapter extends BaseAdapter {
 
         return view;
     }
+
 }

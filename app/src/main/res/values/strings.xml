@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyApplication</string>
     <string name="name_textview">启动界面</string>
-    <string name="name_button">按钮01</string>
+    <string name="name_button">确定</string>
     <string name="name_button2">按钮2</string>
     <string name="name_contact">通信录</string>
     <string name="name_handler">这是一个Handler程序</string>
