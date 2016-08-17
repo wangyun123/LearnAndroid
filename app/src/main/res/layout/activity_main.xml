@@ -86,6 +86,51 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_dbbase_button"
+        android:id="@+id/button_dbbase"
+        android:layout_below="@+id/button_widget"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_network_button"
+        android:id="@+id/button_network_test"
+        android:layout_below="@+id/button_dbbase"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_weather_button"
+        android:id="@+id/button_weather"
+        android:layout_below="@+id/button_network_test"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_volley_button"
+        android:id="@+id/button_show_activity_volley"
+        android:layout_below="@+id/button_weather"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_content_provider_button"
+        android:id="@+id/button_show_activity_content_provider"
+        android:layout_below="@+id/button_show_activity_volley"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <android.support.v7.widget.ListViewCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"

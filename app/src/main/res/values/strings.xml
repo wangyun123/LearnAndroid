@@ -15,4 +15,15 @@
     <string name="name_register_broadcast_button">注册广播控件</string>
     <string name="name_list_view_button">ListView控件</string>
     <string name="name_widget_button">Widget控件</string>
+    <string name="name_dbbase_button">数据库</string>
+    <string name="name_dbbase_text01">cetshi</string>
+    <string name="name_dbbase_query">查询</string>
+    <string name="name_dbbase_add">添加</string>
+    <string name="name_network_button">NetWork</string>
+    <string name="name_textview_weather">天气预报</string>
+    <string name="name_weather_button">天气预报</string>
+    <string name="name_get_weather_button">获取网址</string>
+    <string name="name_parse_weather_button">解析</string>
+    <string name="name_volley_button">显示Volley控件</string>
+    <string name="name_content_provider_button">ContentProvider</string>
 </resources>

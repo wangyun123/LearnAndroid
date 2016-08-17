@@ -22,12 +22,6 @@ public class WebViewActivity extends Activity {
         mWebView = (WebView) findViewById(R.id.test_web_view);
         mWebView.loadUrl("http://www.baidu.com");
         mWebView.setWebViewClient(new WebViewClient(){
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                // 是不是重新加载 拦截见面
-                view.loadUrl("http://www.zhihu.com");
-                return super.shouldOverrideUrlLoading(view, request);
-            }
 
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {

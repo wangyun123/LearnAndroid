@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试网络访问Volley控件"
+        android:textSize="40sp"
+        android:id="@+id/text_view_volley"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="StringRequest请求"
+        android:textSize="40sp"
+        android:id="@+id/button_volley_request"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JsonRequest请求"
+        android:textSize="40sp"
+        android:id="@+id/button_volley_jsonrequest"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ImageRequest请求"
+        android:textSize="40sp"
+        android:id="@+id/button_volley_imagerequest"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_view_volley_image_request"/>
+
+</LinearLayout>

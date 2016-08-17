@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.swty_wy.myapplication">
+    package="com.example.swty_wy.myapplication"
+    android:installLocation="preferExternal">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -38,6 +42,11 @@
         <activity android:name=".WebViewActivity">
 
         </activity>
+        <activity android:name=".DBbaseActivity"/>
+        <activity android:name=".NetworkActivity"/>
+        <activity android:name=".WeatherActivity"/>
+        <activity android:name=".VolleyActivity"/>
+        <activity android:name=".ContentProviderDemoAcitvity"/>
         <activity android:name=".BroadcastActivity">
 
         </activity>
@@ -65,7 +74,11 @@
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@layout/setting_widget">
             </meta-data>
-        </receiver>
+        </receiver><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>
