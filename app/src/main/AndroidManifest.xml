@@ -47,6 +47,13 @@
         <activity android:name=".WeatherActivity"/>
         <activity android:name=".VolleyActivity"/>
         <activity android:name=".ContentProviderDemoAcitvity"/>
+        <provider
+            android:authorities="com.example.swty_wy.myapplication.MyContentProvider"
+            android:name=".MyContentProvider"/>
+        <activity android:name=".contentprovider.ResolverDemoActivity"/>
+        <provider
+            android:authorities="com.example.swty_wy.myapplication.contentprovider"
+            android:name=".contentprovider.PersonProvider"/>
         <activity android:name=".BroadcastActivity">
 
         </activity>

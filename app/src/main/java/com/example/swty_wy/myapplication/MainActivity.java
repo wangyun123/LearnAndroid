@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.swty_wy.myapplication.contentprovider.ResolverDemoActivity;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -142,7 +144,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, VolleyActivity.class));
                 break;
             case R.id.button_show_activity_content_provider:
-                startActivity(new Intent(MainActivity.this, ContentProviderDemoAcitvity.class));
+                //startActivity(new Intent(MainActivity.this, ContentProviderDemoAcitvity.class));
+                startActivity(new Intent(MainActivity.this, ResolverDemoActivity.class));
                 break;
         }
     }

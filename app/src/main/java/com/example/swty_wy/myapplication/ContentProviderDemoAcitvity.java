@@ -7,9 +7,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Contacts;
 import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,53 +43,37 @@ public class ContentProviderDemoAcitvity extends Activity implements View.OnClic
         mButtonAdd = (Button) findViewById(R.id.button_content_provider_add);
         mButtonAdd.setOnClickListener(this);
 
+        //insertRecords("MyUser");
+        displayRecords();
     }
 
     private void displayRecords() {
-        //该数组中包含了所有要返回的字段
-        String columns[] = new String[] { Contacts.People.NAME, Contacts.People.NUMBER };
-        Uri mContacts = Contacts.People.CONTENT_URI;
-        Cursor cur = managedQuery(
-                mContacts,
-                columns,  // 要返回的数据字段
-                null,     // WHERE子句
-                null,     // WHERE 子句的参数
-                null      // Order-by子句
-        );
-        if (cur.moveToFirst()) {
-            String name = null;
-            String phoneNo = null;
+        String columns[] = new String[] {MyUsers.User._ID, MyUsers.User.USER_NAME};
+        Uri myUri = MyUsers.User.CONTENT_URI;
+        Cursor cur = getContentResolver().query(myUri, columns, null, null, null);
+        if (cur.moveToFirst()){
+            String id = null;
+            String userName = null;
             do {
-                // 获取字段的值
-                name = cur.getString(cur.getColumnIndex(Contacts.People.NAME));
-                phoneNo = cur.getString(cur.getColumnIndex(Contacts.People.NUMBER));
-                Toast.makeText(this, name + " " + phoneNo, Toast.LENGTH_LONG).show();
-            } while (cur.moveToNext());
+                id = cur.getString(cur.getColumnIndex(MyUsers.User._ID));
+                userName = cur.getString(cur.getColumnIndex(MyUsers.User.USER_NAME));
+                Toast.makeText(this, id+" "+userName, Toast.LENGTH_LONG).show();
+            }while (cur.moveToNext());
         }
     }
 
     private void updateRecord(int recNo, String name){
-        Uri uri = ContentUris.withAppendedId(Contacts.People.CONTENT_URI, recNo);
-        ContentValues values = new ContentValues();
-        values.put(Contacts.People.NAME, name);
-        getContentResolver().update(uri, values, null, null);
+
     }
 
-    private void insertRecords(String name, String phoneNo) {
+    private void insertRecords(String userName) {
         ContentValues values = new ContentValues();
-        values.put(Contacts.People.NAME, name);
-        Uri uri = getContentResolver().insert(Contacts.People.CONTENT_URI, values);
-        Log.d("ANDROID", uri.toString());
-        Uri numberUri = Uri.withAppendedPath(uri, Contacts.People.Phones.CONTENT_DIRECTORY);
-        values.clear();
-        values.put(Contacts.Phones.TYPE, Contacts.People.Phones.TYPE_MOBILE);
-        values.put(Contacts.People.NUMBER, phoneNo);
-        getContentResolver().insert(numberUri, values);
+        values.put(MyUsers.User.USER_NAME, userName);
+        getContentResolver().insert(MyUsers.User.CONTENT_URI, values);
     }
 
     private void deleteRecords() {
-        Uri uri = Contacts.People.CONTENT_URI;
-        getContentResolver().delete(uri, null, null);
+
     }
 
     @Override
@@ -152,7 +134,7 @@ public class ContentProviderDemoAcitvity extends Activity implements View.OnClic
         // 向联系人Email URI添加Email数据
         getContentResolver().insert(
                 android.provider.ContactsContract.Data.CONTENT_URI, values);
-        Toast.makeText(ContentProviderDemoAcitvity.this, "联系人数据添加成功" , 8000).show();
+        Toast.makeText(ContentProviderDemoAcitvity.this, "联系人数据添加成功" , Toast.LENGTH_LONG).show();
      }
 
     private void search() {
